@@ -3,6 +3,7 @@
 	import Button2 from '$lib/components/button2.svelte';
 	
 	import PlusIcon from '$lib/icons/plusIcon.svelte';
+	import RefreshIcon from '$lib/icons/refreshIcon.svelte';
 
 	import { Api, hosts } from '$lib/api';
 	import { onMount } from 'svelte';
@@ -12,9 +13,15 @@
 
 <div class="flex justify-center">
 	<div class="flex justify-between items-center w-[38rem] py-5">
-		<p class="text-2xl font-bold">Clients:</p>
+		<p class="text-2xl font-bold">
+			Hosts
+		</p>
+
 		<div class="flex space-x-2">
-			<Button2 onClick={Api.getHosts}>Refresh</Button2>
+			<Button2 onClick={Api.getHosts}>
+				<p>Refresh<p>
+			</Button2>
+
 			<Button2 onClick={Api.getHosts}>
 				<p>New<p>
 			</Button2>

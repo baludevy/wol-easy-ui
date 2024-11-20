@@ -9,7 +9,7 @@ export namespace Api {
             if (!res.ok) {
                 throw new Error(`${res.status}`);
             }
-            let data = await res.json();
+            const data = await res.json();
 
             hosts.set(data);
         } catch (error) {
@@ -34,9 +34,9 @@ export namespace Api {
         }
     }
 
-    export let name: string = '';
-    export let ip_address: string = '';
-    export let mac_address: string = '';
+    export let name: string;
+    export let ip_address: string;
+    export let mac_address: string;
 
     export async function addHost() {
         try {
