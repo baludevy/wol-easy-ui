@@ -12,15 +12,14 @@
 	onMount(Api.getHosts);
 </script>
 
-<div class="flex justify-center p-5">
+<div class="flex justify-center p-4">
 	<div class="flex justify-between items-center w-[38rem]">
 		<p class="text-2xl font-bold">Hosts</p>
 
 		<div class="flex space-x-2">
 			<Button2 onClick={Api.getHosts}>
 				<p>Refresh</p>
-				<p></p></Button2
-			>
+			</Button2>
 
 			<Button2 onClick={() => goto('/addNew')}>
 				<p>New</p>

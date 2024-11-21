@@ -17,11 +17,11 @@
 		"enabled": true,
 		"rules": {
 			"recommended": true,
-            "style": {
-                "useConst": {
-                    "level": "off"
-                }
-            }
+			"style": {
+				"useConst": {
+					"level": "off"
+				}
+			}
 		},
 		"ignore": ["node_modules"]
 	},
