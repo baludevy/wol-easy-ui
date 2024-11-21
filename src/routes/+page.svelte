@@ -1,29 +1,29 @@
 <script lang="ts">
 	import HostContainer from '$lib/components/hostContainer.svelte';
 	import Button2 from '$lib/components/button2.svelte';
-	
+
 	import PlusIcon from '$lib/icons/plusIcon.svelte';
 	import RefreshIcon from '$lib/icons/refreshIcon.svelte';
 
 	import { Api, hosts } from '$lib/api';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
 	onMount(Api.getHosts);
 </script>
 
-<div class="flex justify-center">
-	<div class="flex justify-between items-center w-[38rem] py-5">
-		<p class="text-2xl font-bold">
-			Hosts
-		</p>
+<div class="flex justify-center p-5">
+	<div class="flex justify-between items-center w-[38rem]">
+		<p class="text-2xl font-bold">Hosts</p>
 
 		<div class="flex space-x-2">
 			<Button2 onClick={Api.getHosts}>
-				<p>Refresh<p>
-			</Button2>
+				<p>Refresh</p>
+				<p></p></Button2
+			>
 
-			<Button2 onClick={Api.getHosts}>
-				<p>New<p>
+			<Button2 onClick={() => goto('/addNew')}>
+				<p>New</p>
 			</Button2>
 		</div>
 	</div>
