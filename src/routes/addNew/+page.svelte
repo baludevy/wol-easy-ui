@@ -15,14 +15,13 @@
 			Api.addHost(name, ip_address, mac_address);
 
 			goto('/');
-		} catch {
-			console.error();
-		}
+		} catch {}
+		console.error();
 	}
 </script>
 
 <div class="flex justify-center p-5">
-	<div class="border-2 border-[#282828] bg-background text-white rounded-xl w-[38rem] h-[20rem]">
+	<div class="border-2 border-gray bg-background text-white rounded-xl w-[38rem] h-[20rem]">
 		<h1 class="p-4 text-xl font-bold">Add New Host</h1>
 
 		<div class="py-2">
@@ -43,10 +42,8 @@
 			</div>
 		</div>
 
-		<div class="flex justify-end mr-[0.75rem] mt-[0.75rem]">
-			<p class="px-3">
-				<Button2 onClick={() => goto('/')}>Back</Button2>
-			</p>
+		<div class="flex justify-end gap-3 mr-3 mt-3">
+			<Button2 onClick={() => goto('/')}>Back</Button2>
 			<Button3 onClick={addHost}>Add</Button3>
 		</div>
 	</div>

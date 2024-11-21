@@ -10,7 +10,7 @@
 	<input
 		type="text"
 		id="text"
-		class="bg-base border border-base text-sub text-white text-sm rounded-lg block p-2.5"
+		class="bg-base border border-base text-white text-sm rounded-lg block p-2.5"
 		style="width: {width}"
 		bind:value
 		{placeholder}
